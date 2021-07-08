@@ -14,10 +14,14 @@ public class NamesUtils {
         System.out.println("////////");
         //:: -> find the method
         teachers.forEach(System.out::println);
+
+
+
+        printer.accept("Nicolas");
     }
 
 
-    static <T> List<T> getList(T... elements){
+    public static <T> List<T> getList(T... elements){
         return Arrays.asList(elements);
     }
 }
