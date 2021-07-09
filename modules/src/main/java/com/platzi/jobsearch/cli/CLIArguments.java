@@ -1,7 +1,7 @@
 package com.platzi.jobsearch.cli;
 
 import com.beust.jcommander.Parameter;
-import com.sun.beans.introspect.PropertyInfo;
+
 
 public class CLIArguments {
     CLIArguments(){
@@ -11,6 +11,7 @@ public class CLIArguments {
     @Parameter(
             required = true,
             descriptionKey = "KEYWORD",
+            //validateValueWith = CLIKeywordValidator.class,
             description = "KEYWORD"
     )
     private String keyword;
@@ -41,6 +42,7 @@ public class CLIArguments {
     @Parameter(
             names = {"--help"},
             help = false,
+            //validateValueWith = CLIHelpValidator.class,
             description = "Mostrar esta ayuda"
     )
     private boolean isHelp;
